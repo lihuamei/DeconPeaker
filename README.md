@@ -20,6 +20,3 @@ DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the followin
 More Information
 --------------------
 Please see [Tutorial](http://xuranw.github.io/MuSiC/articles/MuSiC.html).
-
-Vignettes and Data available
--------------------

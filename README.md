@@ -5,5 +5,6 @@ DeconPeaker
 ![DeconPeaker\_pipeline](pipeline.png)
 ![DeconPeaker\_comparisons](Comparisons_RMSEs.png)
 
-===================================================
+-------------------------
+-------------------------
 How to use `DeconPeaker`

@@ -6,5 +6,4 @@ DeconPeaker
 ![DeconPeaker\_comparisons](Comparisons_RMSEs.png)
 
 -------------------------
--------------------------
 How to use `DeconPeaker`

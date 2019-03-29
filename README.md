@@ -20,4 +20,4 @@ DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the followin
 
 More Information
 --------------------
-Please see [Tutorial](http://xuranw.github.io/DeconPeaker/articles/MuSiC.html).
+Please see [Tutorial](http://xuranw.github.io/DeconPeaker/articles/DeconPeaker.html).

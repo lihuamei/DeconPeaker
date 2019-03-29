@@ -1,0 +1,470 @@
+ # This is a YAML format file, each input sample must contain five keys, Sample_ID, bam, batch, cellname and peak.
+ # Sample_ID: Sample ID is cunstom defined by users, such as sample_0, sample_1, ...., sample_n.
+ # bam: BAM of aligned file path of the sample.
+ # batch: custom defined batch ID, if the sample has replicates, the batch ID must be the same.
+ # cellname: the cell type of the pure sample.
+ # peak: path of narrow peak file that called by MACS2 of the sample.
+ ##################################################################################
+
+sample_0:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920466_1.trim.PE2SE.nodup.bam
+  batch: HSC_rep_0
+  cellname: HSC
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/HSC/peak/macs2/overlap/HSC.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_1:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920477_1.trim.PE2SE.nodup.bam
+  batch: HSC_rep_1
+  cellname: HSC
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/HSC/peak/macs2/overlap/HSC.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_10:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920544_1.trim.PE2SE.nodup.bam
+  batch: B_rep_3
+  cellname: B
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/B/peak/macs2/overlap/B.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_11:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920493_1.trim.PE2SE.nodup.bam
+  batch: CD4T_rep_0
+  cellname: CD4T
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CD4T/peak/macs2/overlap/CD4T.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_12:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920496_1.trim.PE2SE.nodup.bam
+  batch: CD4T_rep_1
+  cellname: CD4T
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CD4T/peak/macs2/overlap/CD4T.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_13:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920514_1.trim.PE2SE.nodup.bam
+  batch: CD4T_rep_2
+  cellname: CD4T
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CD4T/peak/macs2/overlap/CD4T.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_14:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920518_1.trim.PE2SE.nodup.bam
+  batch: CD4T_rep_3
+  cellname: CD4T
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CD4T/peak/macs2/overlap/CD4T.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_15:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920519_1.trim.PE2SE.nodup.bam
+  batch: CD4T_rep_4
+  cellname: CD4T
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CD4T/peak/macs2/overlap/CD4T.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_18:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920494_1.trim.PE2SE.nodup.bam
+  batch: CD8T_rep_0
+  cellname: CD8T
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CD8T/peak/macs2/overlap/CD8T.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_19:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920497_1.trim.PE2SE.nodup.bam
+  batch: CD8T_rep_1
+  cellname: CD8T
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CD8T/peak/macs2/overlap/CD8T.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_2:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920478_1.trim.PE2SE.nodup.bam
+  batch: HSC_rep_2
+  cellname: HSC
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/HSC/peak/macs2/overlap/HSC.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_20:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920515_1.trim.PE2SE.nodup.bam
+  batch: CD8T_rep_2
+  cellname: CD8T
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CD8T/peak/macs2/overlap/CD8T.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_21:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920520_1.trim.PE2SE.nodup.bam
+  batch: CD8T_rep_3
+  cellname: CD8T
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CD8T/peak/macs2/overlap/CD8T.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_22:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920521_1.trim.PE2SE.nodup.bam
+  batch: CD8T_rep_4
+  cellname: CD8T
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CD8T/peak/macs2/overlap/CD8T.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_23:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920502_1.trim.PE2SE.nodup.bam
+  batch: Ery_rep_0
+  cellname: Ery
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/Ery/peak/macs2/overlap/Ery.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_24:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920503_1.trim.PE2SE.nodup.bam
+  batch: Ery_rep_1
+  cellname: Ery
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/Ery/peak/macs2/overlap/Ery.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_25:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920504_1.trim.PE2SE.nodup.bam
+  batch: Ery_rep_2
+  cellname: Ery
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/Ery/peak/macs2/overlap/Ery.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_26:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920523_1.trim.PE2SE.nodup.bam
+  batch: Ery_rep_3
+  cellname: Ery
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/Ery/peak/macs2/overlap/Ery.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_27:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920524_1.trim.PE2SE.nodup.bam
+  batch: Ery_rep_4
+  cellname: Ery
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/Ery/peak/macs2/overlap/Ery.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_28:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920525_1.trim.PE2SE.nodup.bam
+  batch: Ery_rep_5
+  cellname: Ery
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/Ery/peak/macs2/overlap/Ery.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_29:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920529_1.trim.PE2SE.nodup.bam
+  batch: Ery_rep_6
+  cellname: Ery
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/Ery/peak/macs2/overlap/Ery.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_3:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920506_1.trim.PE2SE.nodup.bam
+  batch: HSC_rep_3
+  cellname: HSC
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/HSC/peak/macs2/overlap/HSC.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_30:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920530_1.trim.PE2SE.nodup.bam
+  batch: Ery_rep_7
+  cellname: Ery
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/Ery/peak/macs2/overlap/Ery.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_31:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920475_1.trim.PE2SE.nodup.bam
+  batch: MONO_rep_0
+  cellname: MONO
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MONO/peak/macs2/overlap/MONO.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_32:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920476_1.trim.PE2SE.nodup.bam
+  batch: MONO_rep_1
+  cellname: MONO
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MONO/peak/macs2/overlap/MONO.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_33:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920487_1.trim.PE2SE.nodup.bam
+  batch: MONO_rep_2
+  cellname: MONO
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MONO/peak/macs2/overlap/MONO.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_34:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920488_1.trim.PE2SE.nodup.bam
+  batch: MONO_rep_3
+  cellname: MONO
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MONO/peak/macs2/overlap/MONO.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_35:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920542_1.trim.PE2SE.nodup.bam
+  batch: MONO_rep_4
+  cellname: MONO
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MONO/peak/macs2/overlap/MONO.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_36:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920543_1.trim.PE2SE.nodup.bam
+  batch: MONO_rep_5
+  cellname: MONO
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MONO/peak/macs2/overlap/MONO.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_37:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920495_1.trim.PE2SE.nodup.bam
+  batch: NK_rep_0
+  cellname: NK
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/NK/peak/macs2/overlap/NK.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_38:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920511_1.trim.PE2SE.nodup.bam
+  batch: NK_rep_1
+  cellname: NK
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/NK/peak/macs2/overlap/NK.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_39:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920512_1.trim.PE2SE.nodup.bam
+  batch: NK_rep_2
+  cellname: NK
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/NK/peak/macs2/overlap/NK.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_4:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920507_1.trim.PE2SE.nodup.bam
+  batch: HSC_rep_4
+  cellname: HSC
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/HSC/peak/macs2/overlap/HSC.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_40:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920516_1.trim.PE2SE.nodup.bam
+  batch: NK_rep_3
+  cellname: NK
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/NK/peak/macs2/overlap/NK.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_41:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920526_1.trim.PE2SE.nodup.bam
+  batch: NK_rep_4
+  cellname: NK
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/NK/peak/macs2/overlap/NK.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_42:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920527_1.trim.PE2SE.nodup.bam
+  batch: NK_rep_5
+  cellname: NK
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/NK/peak/macs2/overlap/NK.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_43:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920468_1.trim.PE2SE.nodup.bam
+  batch: LMPP_rep_0
+  cellname: LMPP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/LMPP/peak/macs2/overlap/LMPP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_44:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920480_1.trim.PE2SE.nodup.bam
+  batch: LMPP_rep_1
+  cellname: LMPP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/LMPP/peak/macs2/overlap/LMPP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_45:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920535_1.trim.PE2SE.nodup.bam
+  batch: LMPP_rep_2
+  cellname: LMPP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/LMPP/peak/macs2/overlap/LMPP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_46:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920467_1.trim.PE2SE.nodup.bam
+  batch: MPP_rep_0
+  cellname: MPP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MPP/peak/macs2/overlap/MPP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_47:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920479_1.trim.PE2SE.nodup.bam
+  batch: MPP_rep_1
+  cellname: MPP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MPP/peak/macs2/overlap/MPP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_48:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920509_1.trim.PE2SE.nodup.bam
+  batch: MPP_rep_2
+  cellname: MPP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MPP/peak/macs2/overlap/MPP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_49:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920510_1.trim.PE2SE.nodup.bam
+  batch: MPP_rep_3
+  cellname: MPP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MPP/peak/macs2/overlap/MPP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_5:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920531_1.trim.PE2SE.nodup.bam
+  batch: HSC_rep_5
+  cellname: HSC
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/HSC/peak/macs2/overlap/HSC.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_50:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920533_1.trim.PE2SE.nodup.bam
+  batch: MPP_rep_4
+  cellname: MPP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MPP/peak/macs2/overlap/MPP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_51:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920534_1.trim.PE2SE.nodup.bam
+  batch: MPP_rep_5
+  cellname: MPP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MPP/peak/macs2/overlap/MPP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_52:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920473_1.trim.PE2SE.nodup.bam
+  batch: MEP_rep_0
+  cellname: MEP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MEP/peak/macs2/overlap/MEP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_53:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920474_1.trim.PE2SE.nodup.bam
+  batch: MEP_rep_1
+  cellname: MEP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MEP/peak/macs2/overlap/MEP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_54:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920485_1.trim.PE2SE.nodup.bam
+  batch: MEP_rep_2
+  cellname: MEP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MEP/peak/macs2/overlap/MEP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_55:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920486_1.trim.PE2SE.nodup.bam
+  batch: MEP_rep_3
+  cellname: MEP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MEP/peak/macs2/overlap/MEP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_56:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920508_1.trim.PE2SE.nodup.bam
+  batch: MEP_rep_4
+  cellname: MEP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MEP/peak/macs2/overlap/MEP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_57:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920540_1.trim.PE2SE.nodup.bam
+  batch: MEP_rep_5
+  cellname: MEP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MEP/peak/macs2/overlap/MEP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_58:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920541_1.trim.PE2SE.nodup.bam
+  batch: MEP_rep_6
+  cellname: MEP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/MEP/peak/macs2/overlap/MEP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_59:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920471_1.trim.PE2SE.nodup.bam
+  batch: GMP_rep_0
+  cellname: GMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/GMP/peak/macs2/overlap/GMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_6:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920532_1.trim.PE2SE.nodup.bam
+  batch: HSC_rep_6
+  cellname: HSC
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/HSC/peak/macs2/overlap/HSC.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_60:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920472_1.trim.PE2SE.nodup.bam
+  batch: GMP_rep_1
+  cellname: GMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/GMP/peak/macs2/overlap/GMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_61:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920483_1.trim.PE2SE.nodup.bam
+  batch: GMP_rep_2
+  cellname: GMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/GMP/peak/macs2/overlap/GMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_62:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920484_1.trim.PE2SE.nodup.bam
+  batch: GMP_rep_3
+  cellname: GMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/GMP/peak/macs2/overlap/GMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_63:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920505_1.trim.PE2SE.nodup.bam
+  batch: GMP_rep_4
+  cellname: GMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/GMP/peak/macs2/overlap/GMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_64:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920538_1.trim.PE2SE.nodup.bam
+  batch: GMP_rep_5
+  cellname: GMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/GMP/peak/macs2/overlap/GMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_65:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920539_1.trim.PE2SE.nodup.bam
+  batch: GMP_rep_6
+  cellname: GMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/GMP/peak/macs2/overlap/GMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_66:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920498_1.trim.PE2SE.nodup.bam
+  batch: CLP_rep_0
+  cellname: CLP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CLP/peak/macs2/overlap/CLP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_67:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920499_1.trim.PE2SE.nodup.bam
+  batch: CLP_rep_1
+  cellname: CLP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CLP/peak/macs2/overlap/CLP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_68:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920522_1.trim.PE2SE.nodup.bam
+  batch: CLP_rep_2
+  cellname: CLP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CLP/peak/macs2/overlap/CLP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_69:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920528_1.trim.PE2SE.nodup.bam
+  batch: CLP_rep_3
+  cellname: CLP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CLP/peak/macs2/overlap/CLP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_7:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920492_1.trim.PE2SE.nodup.bam
+  batch: B_rep_0
+  cellname: B
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/B/peak/macs2/overlap/B.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_70:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920545_1.trim.PE2SE.nodup.bam
+  batch: CLP_rep_4
+  cellname: CLP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CLP/peak/macs2/overlap/CLP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_71:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920469_1.trim.PE2SE.nodup.bam
+  batch: CMP_rep_0
+  cellname: CMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CMP/peak/macs2/overlap/CMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_72:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920470_1.trim.PE2SE.nodup.bam
+  batch: CMP_rep_1
+  cellname: CMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CMP/peak/macs2/overlap/CMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_73:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920481_1.trim.PE2SE.nodup.bam
+  batch: CMP_rep_2
+  cellname: CMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CMP/peak/macs2/overlap/CMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_74:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920482_1.trim.PE2SE.nodup.bam
+  batch: CMP_rep_3
+  cellname: CMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CMP/peak/macs2/overlap/CMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_75:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920500_1.trim.PE2SE.nodup.bam
+  batch: CMP_rep_4
+  cellname: CMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CMP/peak/macs2/overlap/CMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_76:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920501_1.trim.PE2SE.nodup.bam
+  batch: CMP_rep_5
+  cellname: CMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CMP/peak/macs2/overlap/CMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_77:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920536_1.trim.PE2SE.nodup.bam
+  batch: CMP_rep_6
+  cellname: CMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CMP/peak/macs2/overlap/CMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_78:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920537_1.trim.PE2SE.nodup.bam
+  batch: CMP_rep_7
+  cellname: CMP
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/CMP/peak/macs2/overlap/CMP.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_8:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920513_1.trim.PE2SE.nodup.bam
+  batch: B_rep_1
+  cellname: B
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/B/peak/macs2/overlap/B.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz
+sample_9:
+  bam:
+  - /public/lihm/data/ATAC/GSE74912//bams/SRR2920517_1.trim.PE2SE.nodup.bam
+  batch: B_rep_2
+  cellname: B
+  peak: /public/lihm/data/ATAC/GSE74912/peaks/B/peak/macs2/overlap/B.tn5.pf.500K.pval0.01.naive_overlap.filt.narrowPeak.gz

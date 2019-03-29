@@ -11,6 +11,7 @@ DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the followin
 	* Numpy
 	* Scipy
 	* Pandas
+	* bx
 	* Matplotlib
 	* rpy2
 * R3.5:

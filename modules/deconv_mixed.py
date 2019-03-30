@@ -69,7 +69,7 @@ def cellspecificpeaks(profile, phenotype, kargs=None):
     :return: 0
     
     '''
-    sigmatrix = find_marker_peaks(
+    sigmatrix, ctsp_peaks = find_marker_peaks(
             profile             , 
             phenotype           , 
             kargs.thread        , 
@@ -84,16 +84,15 @@ def cellspecificpeaks(profile, phenotype, kargs=None):
         bool_v, sigmatrix = True, sigmatrix[fields]
     else:
         bool_v = False
-    
     bars(pd.DataFrame({
-            'val': np.sum(ctsp_all[phenotype.index], axis=0), 
+            'val': np.sum(ctsp_peaks[phenotype.index], axis=0), 
             'lab': phenotype.index.tolist()
-        }), os.path.join(kargs.outdir, kargs.prefix + '_identified_cstps_{}'.format(kargs.norm)))
+        }), os.path.join(kargs.outdir, kargs.prefix + '_cstps_counts'), platform=kargs.lib_strategy)
 
-    outfile = os.path.join(kargs.outdir, kargs.prefix + '_{}_signature_matrix.xls'.format(kargs.norm))
+    outfile = os.path.join(kargs.outdir, kargs.prefix + '_signature_matrix.xls')
     sigmatrix.to_csv(outfile, sep='\t', header=True, index=bool_v)
     
-    outfig = os.path.join(kargs.outdir, kargs.prefix + '_{}_signature_heatmap'.format(kargs.norm))
+    outfig = os.path.join(kargs.outdir, kargs.prefix + '_signature_heatmap')
     if sigmatrix.shape[0] <= 10000: cluster_heatmap(sigmatrix[fields], outfig)
     return sigmatrix
 

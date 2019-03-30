@@ -1,10 +1,11 @@
- # This is a YAML format file, each input sample must contain five keys, Sample_ID, bam, batch, cellname and peak.
- # Sample_ID: Sample ID is cunstom defined by users, such as sample_0, sample_1, ...., sample_n.
- # bam: BAM of aligned file path of the sample.
- # batch: custom defined batch ID, if the sample has replicates, the batch ID must be the same.
- # cellname: the cell type of the pure sample.
- # peak: path of narrow peak file that called by MACS2 of the sample.
- ##################################################################################
+# This is a YML format file of refernce samples, including five keys and details as follows:
+# 1) sample_ID: unique sample ID for each sample.
+# 2) bam: BAM of aligned file path
+# 3) batch: batch ID of each sample, if cell type has replicates, batch ID must be the same.
+# 4) cellname: cell name of the pure sample.
+# 5) peak: peak file path of the sample.
+#
+# ##########################################################################################
 
 sample_0:
   bam:

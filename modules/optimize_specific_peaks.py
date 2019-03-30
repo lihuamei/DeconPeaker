@@ -23,13 +23,14 @@ LOGS = log_infos() # logging informative
 
 #--------------------------------------------------------
 
-def extract_infos(profile, phenotypes, qvalues, fields, exp_ratio=0.33):
+def extract_infos(profile, phenotypes, qvalues, fields, pi_score=1.0, exp_ratio=0.33):
     '''
     extract key infos for flow-up analysis
     :param profile: [pd.DataFrame] pure sample profile
     :param phenotypes: [pd.DataFrame] Phenotype classes file
     :param qvalues: [pd.DataFrame] q-value of cell type specific peaks
     :param fields: [list] target data field
+    :param pi_score: [float] Pi-score value to descide cell type-specific peaks, default: 1.0
     :param exp_ratio: [float] peak expression concentration ratio, default: 0.33
     :return: infos [pd.DataFrame]
     
@@ -52,6 +53,10 @@ def extract_infos(profile, phenotypes, qvalues, fields, exp_ratio=0.33):
     
     profile = pd.concat([profile, infos], axis=1)
     profile = profile.loc[~(profile.Bool == 1)]
+    profile['Score'] = profile.Qvalue * profile.FoldChange
+    profile = profile[profile.Score >= pi_score ]
+    LOGS.info('{} cell type specific peaks across {} cell types were identified'.format(profile.shape[0], phenotypes.shape[0]))
+
     return profile
 
 def filter_peaks(profile, phenotypes, group_size):
@@ -65,7 +70,6 @@ def filter_peaks(profile, phenotypes, group_size):
     
     '''
     sub_profile, cellnames = None, phenotypes.index
-    profile['Score'] = profile.Qvalue * profile.FoldChange
     profile = profile.sort_values(by=['Score'], ascending=False)
      
     for idx, sample_idx in enumerate(profile.TopIndex.unique()):
@@ -95,10 +99,11 @@ def optimize_peaks(profile, phenotypes, qvalues, min_group_size, max_group_size,
     
     '''
     fields, cond_pre, size_pre = phenotypes.index, sys.float_info.max, 0
-    profile = extract_infos(profile, phenotypes, qvalues, fields, exp_ratio)
+    profile = extract_infos(profile, phenotypes, qvalues, fields, pi_score, exp_ratio)
     group_size = range(min_group_size, max_group_size + 1)[::-1]
     del qvalues
 
+    profile_bak = profile
     for idx, size in enumerate(group_size):
         sub_profile, cond_cur = filter_peaks(profile, phenotypes, size)
         if cond_cur > cond_pre: continue
@@ -107,4 +112,4 @@ def optimize_peaks(profile, phenotypes, qvalues, min_group_size, max_group_size,
     sub_profile, cond_cur = filter_peaks(profile, phenotypes, size_pre)
     LOGS.info('Group size of each phenotype is {}, matrix condition number is {}'.format(size_pre, cond_cur))
     sub_profile = sub_profile[['chrom', 'start', 'end'] + phenotypes.index.tolist()]
-    return sub_profile
+    return sub_profile, profile_bak

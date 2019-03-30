@@ -38,7 +38,6 @@ def find_marker_peaks(profile, phenotypes, *kargs):
             threads = threads
         )
     
-    pdb.set_trace()
     profile = profile[~profile.index.duplicated(keep='first')]
     qvalues = qvalues[~qvalues.index.duplicated(keep='first')]
     profile = merged_replicates(profile, phenotypes, method=merge_method).loc[qvalues.index]
@@ -46,7 +45,7 @@ def find_marker_peaks(profile, phenotypes, *kargs):
     LOGS.info('{} cell type specific peaks across {} cell types were identified'.format(profile.shape[0], phenotypes.shape[0]))
     
     LOGS.info('Performing optimization for cell type specific peaks')
-    sigmatrix = optimize_peaks(
+    sigmatrix, ctsp_peaks = optimize_peaks(
             profile        , 
             phenotypes     , 
             qvalues        , 
@@ -55,4 +54,6 @@ def find_marker_peaks(profile, phenotypes, *kargs):
             pi_score_cutoff,
             exp_ratio      
         )
-    return sigmatrix
+    max_vals = np.max(profile[phenotypes.index], axis=1)
+    ctsp_peaks[phenotypes.index] = ctsp_peaks[phenotypes.index].ge(max_vals, axis=0).astype(int)
+    return sigmatrix, ctsp_peaks

@@ -17,6 +17,11 @@ DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the followin
 * R3.5:
 	* pls
 	* transport
+	* colorRamps
+* Other tools (when excute preprocess and simulation steps):
+	* bedtools
+	* samtools
+	* featureCounts
 
 More Information
 --------------------

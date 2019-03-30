@@ -9,7 +9,6 @@
 #-----------------------------------------------------
 # load python modules
 
-import pysam
 import subprocess
 
 #-----------------------------------------------------
@@ -19,6 +18,11 @@ from utils import *
 
 #-----------------------------------------------------
 # global setting
+
+if sys.platform == 'win32':
+	pass
+else:
+	import pysam
 
 LOGS = log_infos()
 

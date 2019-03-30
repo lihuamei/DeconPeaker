@@ -10,7 +10,6 @@
 # load python modules
 
 from scipy import io
-from bx.intervals.intersection import Intersecter, Interval
 
 #-----------------------------------------------------
 # load own modules
@@ -21,6 +20,11 @@ from utils import *
 # global setting
 
 LOGS = log_infos()
+
+if sys.platform == 'win32':
+	pass
+else:
+	from bx.intervals.intersection import Intersecter, Interval
 
 #----------------------------------------------------
 def select_peaks(peakfil, merged_fp, cut_qval=2, cellname=None):

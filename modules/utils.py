@@ -70,7 +70,10 @@ def create_tmp_files(fil_names=None, delete=False, fixnames=False, mode='w', tmp
             for idx in xrange(len(names)) ]
     names  = [rand + name for name, rand in zip(names, randon) ]
     tmpdir = os.path.join(tempfile.gettempdir(), tmpdir)
-    0 if os.path.exists(tmpdir) else os.mkdir(tmpdir) 
+    try:
+        0 if os.path.exists(tmpdir) else os.mkdir(tmpdir) 
+    except OSError:
+        pass
     if fixnames:
         _fps = [open(os.path.join(tmpdir, fil), 'w') for fil in names]
     else:

@@ -226,8 +226,8 @@ def opts():
 
     deconv.add_argument(
             '--method',
-            help = 'Deconvolution method, including SIMPLS, PCR, LR and RSIMPLS. DEFAULT: SIMPLS',
-            choices = ['SIMPLS', 'RSIMPLS', 'PCR', 'LR'],
+            help = 'Deconvolution method, including SIMPLS, LR (Linear regression) and RSIMPLS (Robust SIMPLS). DEFAULT: SIMPLS',
+            choices = ['SIMPLS', 'RSIMPLS', 'LR'],
             default = 'SIMPLS'
         )
 
@@ -241,7 +241,7 @@ def opts():
     deconv.add_argument(
             '--norm',
             help = 'A series method for normalizing mixture samples, including quantile, DESeq, upper quantile, PPM and TMM. \
-                    DEFAULT: CPM',
+                    DEFAULT: None',
             choices = ['QN', 'DESeq', 'UQN', 'PPM', 'TMM'],
             default = None
         )
@@ -270,7 +270,7 @@ def opts():
             '--pure',
             '-p',
             help = 'YAML format file, details about a set of pure samples, including the pathes of BAMS. \
-                    Note: reference YAML -> test/sim_mixed/GSE74912_ATAC_pure_samples.yaml',
+                    Note: reference YAML -> test/synthetic_mixture_samples.yaml',
             type = str,
             metavar = 'PURE'
         )
@@ -298,10 +298,10 @@ def opts():
     simulate.add_argument(
             '--readcounts',
             '-c',
-            help = 'Total read counts of each simulated mixture sample. DEFAULT: 20000000',
+            help = 'Total read counts of each simulated mixture sample. DEFAULT: 2000000',
             metavar = 'READCOUNTS',
             type = int,
-            default = 20000000
+            default = 2000000
         )
 
     simulate.add_argument(

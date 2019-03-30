@@ -54,7 +54,7 @@ def preprocess():
             ARGS.infos.BAM.values.tolist(), 
             nonovp_peakfil                , 
             ARGS                          , 
-            prefix = ARGS.prefix + '_reference_count_matrix_offset_tss_{}'.format(ARGS.offset),
+            prefix = ARGS.prefix + '_reference_count_matrix',
             outdir = ARGS.outdir          ,
             bg = False
         )
@@ -74,14 +74,13 @@ def findctsps():
     phenotypes = load_phenotypes(ARGS.phenotype)
     LOGS.info('Loaded {} peaks and {} samples'.format(profile.shape[0], profile.shape[1] - 3))
 
-    ARGS.prefix = ARGS.profile.split(os.sep)[-1].rsplit('.', 1)[0]
+    ARGS.prefix = os.path.basename(ARGS.profile).rsplit('.', 1)[0]
     LOGS.info('Normalizing pure profile by {} method to remove batch effects'.format(ARGS.norm))
     profile_norm = normalize_profile(
             profile              , 
             ARGS.norm            , 
             profile.columns[3 : ],
-            False                ,
-            os.path.join(ARGS.outdir, os.path.basename(ARGS.profile).rsplit('.', 1)[0])
+            False                
         )
     
     profile_norm = filter_weakpeaks(profile_norm)

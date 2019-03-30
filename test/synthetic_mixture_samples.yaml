@@ -1,0 +1,72 @@
+# This is a YAML format file template of pure cell samples to simulate mixture samples and including the following sections:
+# sample_ID: sample ID number, must ensure that each sample ID is different
+# data : input data of each pure cell, suport BAM and BED
+# cellname: corresponding cell name of each pure sample
+
+---
+sample_0:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920507_1.trim.PE2SE.nodup.bam
+    cellname:
+      - HSC
+sample_1:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920508_1.trim.PE2SE.nodup.bam
+    cellname:
+      - MEP
+sample_2:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920509_1.trim.PE2SE.nodup.bam
+    cellname:
+      - MPP
+sample_3:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920511_1.trim.PE2SE.nodup.bam
+    cellname:
+      - NK
+sample_4:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920493_1.trim.PE2SE.nodup.bam
+    cellname:
+      - CD4T
+sample_5:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920494_1.trim.PE2SE.nodup.bam
+    cellname:
+      - CD8T
+sample_6:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920498_1.trim.PE2SE.nodup.bam
+    cellname:
+      - CLP
+sample_7:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920482_1.trim.PE2SE.nodup.bam
+    cellname:
+      - CMP
+sample_8:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920503_1.trim.PE2SE.nodup.bam
+    cellname:
+      - Ery
+sample_9:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920484_1.trim.PE2SE.nodup.bam
+    cellname:
+      - GMP
+
+sample_10:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920535_1.trim.PE2SE.nodup.bam
+    cellname:
+      - LMPP
+sample_11:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920513_1.trim.PE2SE.nodup.bam
+    cellname:
+      - B
+sample_12:
+    data:
+      - /mnt/disk1/lhm/atac_rna_pipeline/2.reports/ATAC_SRP110695/bams/SRR2920488_1.trim.PE2SE.nodup.bam
+    cellname:
+      - MONO

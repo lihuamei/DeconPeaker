@@ -23,7 +23,8 @@ DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the followin
 	* samtools
 	* featureCounts
 
-There are four parts in DeconPeaker, and details as follows:
+-------------------
+It is necessary to mention that there are four parts in DeconPeaker, and details as follows:
 * preprocess: only support on Linux system
 * findctsps: support on Windows and Linux systems
 * deconvolution: support on Windows and Linux systems

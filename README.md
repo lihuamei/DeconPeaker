@@ -13,7 +13,7 @@ DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the followin
 	* Pandas
 	* bx
 	* Matplotlib
-	* rpy2
+	* rpy2 (older version)
 * R3.5:
 	* pls
 	* transport
@@ -22,6 +22,12 @@ DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the followin
 	* bedtools
 	* samtools
 	* featureCounts
+
+There are four parts in DeconPeaker, and details as follows:
+* preprocess: only support on Linux system
+* findctsps: support on Windows and Linux systems
+* deconvolution: support on Windows and Linux systems
+* simulation: only support on Linux system
 
 More Information
 --------------------

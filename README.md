@@ -25,10 +25,10 @@ DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the followin
 
 -------------------
 It is necessary to mention that there are four parts in DeconPeaker, and details as follows:
-* preprocess: only support on Linux system
-* findctsps: support on Windows and Linux systems
-* deconvolution: support on Windows and Linux systems
-* simulation: only support on Linux system
+* preprocess: only supports on Linux system
+* findctsps: supports on Windows and Linux systems
+* deconvolution: supports on Windows and Linux systems
+* simulation: only supports on Linux system
 
 More Information
 --------------------

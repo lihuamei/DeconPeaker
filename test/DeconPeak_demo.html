@@ -13130,7 +13130,7 @@ Source: DeconPeaker_demo.ipynb</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preprocessing-chromatin-accessibility-datasets">Preprocessing chromatin accessibility datasets<a class="anchor-link" href="#Preprocessing-chromatin-accessibility-datasets">&#182;</a></h2><p>DeconPeaker provides a commond line to process chromatin accessibility datasets except gene expression datasets, and this step only support Linux system. The input file must be YAML format, and including five keys.
+<h2 id="Preprocessing-chromatin-accessibility-datasets">Preprocessing chromatin accessibility datasets<a class="anchor-link" href="#Preprocessing-chromatin-accessibility-datasets">&#182;</a></h2><p>DeconPeaker provides a commond line to process chromatin accessibility datasets except gene expression datasets, and this step only supports Linux system. The input file must be YAML format, and including five keys.
 <em>1) sample_ID: unique sample ID for each sample.</em>2) bam: BAM of aligned file path
 <em>3) batch: batch ID of each sample, if cell type has replicates, batch ID must be the same.</em>4) cellname: cell name of the pure sample.
 *5) peak: peak file path of the sample.
@@ -13155,7 +13155,7 @@ The test YAML format file can see in test/GSE74912_ATAC_pure_cells.yaml</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This commond line will create a directory, named "preprocess", which including count matrix file and phenotype class file. Both files are the basis for the subsequent analysis.</p>
+<p>This commond line will create a directory, named "preprocess", including count matrix file and phenotype class file. Both files are the basis for the subsequent analysis.</p>
 
 </div>
 </div>
@@ -13181,7 +13181,7 @@ The test YAML format file can see in test/GSE74912_ATAC_pure_cells.yaml</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="ATAC-Seq-(Syntentic-ATAC-Seq-dataset)">ATAC-Seq (Syntentic ATAC-Seq dataset)<a class="anchor-link" href="#ATAC-Seq-(Syntentic-ATAC-Seq-dataset)">&#182;</a></h1><h2 id="Deconvolution-of-synthetic-mixtures-by-using-DeconPeaker.">Deconvolution of synthetic mixtures by using DeconPeaker.<a class="anchor-link" href="#Deconvolution-of-synthetic-mixtures-by-using-DeconPeaker.">&#182;</a></h2>
+<h1 id="ATAC-Seq-(Syntentic-ATAC-Seq-dataset)">ATAC-Seq (Syntentic ATAC-Seq dataset)<a class="anchor-link" href="#ATAC-Seq-(Syntentic-ATAC-Seq-dataset)">&#182;</a></h1><h2 id="Deconvolution-of-synthetic-mixtures-using-DeconPeaker.">Deconvolution of synthetic mixtures using DeconPeaker.<a class="anchor-link" href="#Deconvolution-of-synthetic-mixtures-using-DeconPeaker.">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13841,7 +13841,7 @@ INFO  @ Sat, 30 Mar 2019 12:12:28: Elapsed time is 29.1779999733 seconds
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Scatter-plot-show-correlation-between-preditions-and-true-proportions">Scatter plot show correlation between preditions and true proportions<a class="anchor-link" href="#Scatter-plot-show-correlation-between-preditions-and-true-proportions">&#182;</a></h2>
+<h2 id="Scatter-plot-shows-correlation-between-the-preditions-and-the-true-proportions">Scatter plot shows correlation between the preditions and the true proportions<a class="anchor-link" href="#Scatter-plot-shows-correlation-between-the-preditions-and-the-true-proportions">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14347,7 +14347,7 @@ INFO  @ Sat, 30 Mar 2019 10:45:09: Elapsed time is 9.1400001049 seconds
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Deconvolution-of-RNA-Seq-mixtures-by-using-DeconPeaker">Deconvolution of RNA-Seq mixtures by using DeconPeaker<a class="anchor-link" href="#Deconvolution-of-RNA-Seq-mixtures-by-using-DeconPeaker">&#182;</a></h2>
+<h2 id="Deconvolution-of-RNA-Seq-mixtures-using-DeconPeaker">Deconvolution of RNA-Seq mixtures using DeconPeaker<a class="anchor-link" href="#Deconvolution-of-RNA-Seq-mixtures-using-DeconPeaker">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14508,7 +14508,7 @@ INFO  @ Sat, 30 Mar 2019 11:01:49: Elapsed time is 168.177000046 seconds
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Scatter-plot-show-correlation-between-preditions-and-true-proportions">Scatter plot show correlation between preditions and true proportions<a class="anchor-link" href="#Scatter-plot-show-correlation-between-preditions-and-true-proportions">&#182;</a></h2>
+<h2 id="Scatter-plot-shows-correlation-between-the-preditions-and-the-true-proportions">Scatter plot shows correlation between the preditions and the true proportions<a class="anchor-link" href="#Scatter-plot-shows-correlation-between-the-preditions-and-the-true-proportions">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14774,7 +14774,7 @@ INFO  @ Sat, 30 Mar 2019 11:14:09: Elapsed time is 13.7679998875 seconds
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Deconvolution-of-Microarray-mixtures-by-using-DeconPeaker">Deconvolution of Microarray mixtures by using DeconPeaker<a class="anchor-link" href="#Deconvolution-of-Microarray-mixtures-by-using-DeconPeaker">&#182;</a></h2>
+<h2 id="Deconvolution-of-Microarray-mixtures-using-DeconPeaker">Deconvolution of Microarray mixtures using DeconPeaker<a class="anchor-link" href="#Deconvolution-of-Microarray-mixtures-using-DeconPeaker">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14896,7 +14896,7 @@ INFO  @ Sat, 30 Mar 2019 11:19:47: Elapsed time is 3.0720000267 seconds
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Scatter-plot-show-correlation-between-preditions-and-true-proportions">Scatter plot show correlation between preditions and true proportions<a class="anchor-link" href="#Scatter-plot-show-correlation-between-preditions-and-true-proportions">&#182;</a></h2>
+<h2 id="Scatter-plot-shows-correlation-between-the-preditions-and-the-true-proportions">Scatter plot shows correlation between the preditions and the true proportions<a class="anchor-link" href="#Scatter-plot-shows-correlation-between-the-preditions-and-the-true-proportions">&#182;</a></h2>
 </div>
 </div>
 </div>

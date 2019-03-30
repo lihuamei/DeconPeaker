@@ -68,7 +68,7 @@ def RSIMPLS(Y, X):
 #--------------------------------------------------------------------------
 # SIMPLS: An alternative approach to partial least squares regression
 
-def simpls_deconv(Y, X, method='SIMPLS', pvalue=False):
+def deconv(Y, X, method='SIMPLS', pvalue=False):
     '''
     deconvolution using a SIMPLS strategy
     :param Y: [pd.DataFrame] mixed sample profile

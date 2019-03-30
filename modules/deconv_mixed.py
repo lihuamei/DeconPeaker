@@ -119,7 +119,7 @@ def deconvcells(mixsamples, sigprofile, lib_strategy=None, pvalue=False, method=
                 log = False       , 
                 outfile = None
             )
-    deconv_results = simpls_deconv(mixsamples, sigprofile, method=method, pvalue=pvalue)
+    deconv_results = deconv(mixsamples, sigprofile, method=method, pvalue=pvalue)
     outfile = os.path.join(outdir, 'deconPeaker-Results.xls')
     deconv_results.to_csv(outfile, sep='\t', index=True, header=True)
     

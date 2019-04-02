@@ -1,6 +1,6 @@
 #!/usr/bin/env R
 #title      : simpls.r
-#decription : Deconvolution by SIMPLS or PCR method
+#decription : Deconvolution by SIMPLS or Linear Regression method
 #author     : Huamei Li
 #date       : 27/11/2018
 #type       : module

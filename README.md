@@ -7,17 +7,18 @@ DeconPeaker
 How to use `DeconPeaker`?
 ---------------------
 DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the following dependencies.
-* Python2.7:
+* Python3.8:
 	* Numpy
 	* Scipy
 	* Pandas
 	* bx
 	* Matplotlib
 	* rpy2 (older version)
-* R3.5:
+* R4.0:
 	* pls
 	* transport
 	* colorRamps
+	* MASS
 * Other tools (when excute preprocess and simulation steps):
 	* bedtools
 	* samtools

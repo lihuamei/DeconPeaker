@@ -4,7 +4,7 @@
 #author     : Huamei Li
 #date       : 23/07/2018
 #type       : module
-#version    : 2.7
+#version    : 3.8
 
 #-----------------------------------------------------
 # load python modules
@@ -23,7 +23,7 @@ from rpy2.robjects import r, pandas2ri
 #-----------------------------------------------------
 # load own modules
 
-from utils import *
+from modules.utils import *
 
 #-----------------------------------------------------
 # global setting
@@ -46,7 +46,11 @@ def cluster_heatmap(df, outfile):
     r.assign('df', df)
 
     r('''
-        library(colorRamps)
+        options(warn = -1)
+        list.of.packages <- c("colorRamps")
+        new.pkgs <- list.of.packages[!(list.of.packages %in% installed.packages()[, "Package"])]
+        if(length(new.pkgs )) install.packages(new.pkgs)
+        suppressMessages(library(colorRamps, quietly = T))
         df = as.matrix(df)
         png(outfile)
         heatmap(df, col = blue2red(50), margins=c(15, 5), labRow=NA)
@@ -73,7 +77,6 @@ def stack_bars(df, outfile, tool='deconPeaker'):
     plt.ylabel(tool + ' prediction', fontsize=10)
     plt.yticks(np.arange(0, 1.2, step=0.2), ('0', '0.2', '0.4', '0.6', '0.8', '1.0'))
     plt.tight_layout() 
-    plt.show()
     outfile = outfile if outfile.endswith('.png') else outfile + '.png'
     plt.savefig(outfile, format='png', dpi=300)
     return 0

@@ -4,12 +4,12 @@
 #author      : Huamei Li
 #date        : 19/09/2018
 #type        : module
-#version     : 2.7
+#version     : 3.8
 
 #-----------------------------------------------------
 # load own modules
 
-from utils import *
+from modules.utils import *
 
 #-----------------------------------------------------
 

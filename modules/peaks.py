@@ -4,7 +4,7 @@
 #author     : Huamei Li
 #date       : 02/06/2018
 #type       : module
-#version    : 2.7
+#version    : 3.8
 
 #-----------------------------------------------------
 # load python modules
@@ -14,7 +14,7 @@ from scipy import io
 #-----------------------------------------------------
 # load own modules
 
-from utils import *
+from modules.utils import *
 
 #-----------------------------------------------------
 # global setting
@@ -116,7 +116,7 @@ def remove_redundant_sorted_peaks(peaks, fp):
     
     for idx, peak in enumerate(peaks):
         container.append(peak)
-        if len(container) / 2 <> 1: continue
+        if len(container) / 2 != 1: continue
         container = find_ovp_lsts(container) 
 
         if len(container) < 2: continue
@@ -140,12 +140,12 @@ def remove_redundant_peakfile(peakfil, cells, prefix, outdir):
     cell_map, container = { cell : idx for idx, cell in enumerate(cells) }, []
     with open(peakfil, 'rb') as fp_r:
         for idx, line in enumerate(fp_r):
-            line_sep = line.strip().split('\t')
+            line_sep = line.decode().strip().split('\t')
             (chrom, start, end), score, cell = line_sep[0 : 3], line_sep[6], line_sep[10]
             start, end, score = int(start), int(end), float(score)
             container.append([chrom, start, end, score])
 
-            if len(container) / 2 <> 1: continue
+            if len(container) / 2 != 1: continue
             container = find_ovp_lsts(container, idx=3)
             if len(container) < 2: continue        
             tmp_overlap.write('\t'.join(map(str, container[0][0 : -1])) + '\n')

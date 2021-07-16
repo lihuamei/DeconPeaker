@@ -4,11 +4,12 @@
 #author      : Huamei Li
 #date        : 29/05/2018
 #type        : main script
-#version     : 2.7
+#version     : 3.8
 
 #-----------------------------------------------------
 # load python modules
 
+import numexpr
 from time import time
 
 #-----------------------------------------------------
@@ -23,6 +24,8 @@ from modules.parse_opts   import parse_opts
 # global setting
 
 LOGS = log_infos() # logging informative
+
+numexpr.set_num_threads(numexpr.detect_number_of_cores())
 
 #-----------------------------------------------------
 
@@ -46,7 +49,7 @@ def preprocess():
     
     if ARGS.offset:
         LOGS.info('Filtering out the peaks nearby the TSS (+/-{} bps)'.format(ARGS.offset))
-	nonovp_peakfil = remove_peaks_nearbytss(nonovp_peakfil, ARGS.hg_genome, offset=ARGS.offset)
+    nonovp_peakfil = remove_peaks_nearbytss(nonovp_peakfil, ARGS.hg_genome, offset=ARGS.offset)
     
     peaknum = get_line_number(nonovp_peakfil)
     LOGS.info('Counting the number of fragments from each sample falling into each of {} peaks'.format(peaknum))
@@ -122,7 +125,7 @@ def deconvolution():
             ARGS.outdir      
         )
     LOGS.info('Showing deconPeaker results: ')
-    print >> sys.stderr, results
+    print(results)
     return 0
 
 def simulate():

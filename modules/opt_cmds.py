@@ -4,7 +4,7 @@
 #author      : Huamei Li
 #date        : 29/05/2018
 #type        : module
-#version     : 2.7
+#version     : 3.8
 
 #--------------------------------------------------------
 # load python modules
@@ -17,7 +17,7 @@ import argparse
 
 def opts():
     parser = argparse.ArgumentParser(description='deconPeaker - a deconvolution model to identify cell types based on \
-            chromatin accessibility in ATAC-Seq data of mixture samples.', version='version_1.0')
+            chromatin accessibility in ATAC-Seq data of mixture samples.')
     subpar = parser.add_subparsers() # add sub parsers
 
     preprocess = subpar.add_parser('preprocess' , help='Create chromatin accessibility profile for pure samples, \

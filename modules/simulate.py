@@ -4,13 +4,13 @@
 #author     : Huamei Li
 #date       : 21/06/2018
 #type       : module
-#version    : 2.7
+#version    : 3.8
 
 #-----------------------------------------------------
 # load own modules
 
-from bams import *
-from random_proportion import *
+from modules.bams import *
+from modules.random_proportion import *
 
 #-----------------------------------------------------
 # global setting

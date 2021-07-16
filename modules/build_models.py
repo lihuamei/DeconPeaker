@@ -4,7 +4,7 @@
 #author      : Huamei Li
 #date        : 19/06/2018
 #type        : module
-#version     : 2.7
+#version     : 3.8
 
 #-----------------------------------------------------
 # load python modules
@@ -14,7 +14,7 @@ from rpy2.robjects   import r, pandas2ri
 #-----------------------------------------------------
 # load own modules
 
-from find_markers import *
+from modules.find_markers import *
 
 #-----------------------------------------------------
 # global setting
@@ -34,6 +34,7 @@ def SIMPLS(Y, X, method, pvalue=False):
     
     '''
     r.assign('Y', Y); r.assign('X', X); r.assign('method', method); r.assign('pvalue', pvalue)
+    
     r('''
         source('modules/simpls_deconv.r')
         results <- simpls_deconv(Y, X, method, pvalue)
@@ -78,13 +79,13 @@ def deconv(Y, X, method='SIMPLS', pvalue=False):
     :return: coeffs [np.array]
     
     '''
-    mixsnames, purecells = Y.columns, X.columns
+    mixsnames, purecells, deconv_results = Y.columns, X.columns, [] 
     
     if method == 'RSIMPLS':
         deconv_results = RSIMPLS(Y, X)
     else:
-        deconv_results = [ SIMPLS(Y[sn], X, method, pvalue) for sn in mixsnames ]
-
+        for sn in mixsnames: deconv_results.append(SIMPLS(Y[sn], X, method, pvalue))
+        #deconv_results = [ SIMPLS(Y[sn], X, method, pvalue) for sn in mixsnames ]
     deconv_results = pd.DataFrame(
             deconv_results,
             columns = np.append(purecells, ['Rsquared', 'RMSEP', 'P.value']),

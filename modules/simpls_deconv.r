@@ -8,11 +8,12 @@
 #####################################################################################
 # Check package installed or not
 
+options(warn = -1)
 required_pkgs = c('MASS', 'pls', 'transport')
 
 for(p in required_pkgs){
-  if(!require(p,character.only = TRUE)) install.packages(p)
-  library(p, character.only = TRUE)
+  if(!suppressMessages(require(p,character.only = TRUE, quietly = T))) install.packages(p)
+  suppressMessages(library(p, character.only = TRUE, quietly = T))
 }
 
 #####################################################################################

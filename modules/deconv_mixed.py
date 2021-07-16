@@ -4,13 +4,13 @@
 #author      : Huamei Li
 #date        : 19/06/2018
 #type        : module
-#version     : 2.7
+#version     : 3.8
 
 #-----------------------------------------------------
 # load own modules
 
-from build_models import *
-from stat_plot    import *
+from modules.build_models import *
+from modules.stat_plot    import *
 
 #-----------------------------------------------------
 # global setting
@@ -108,7 +108,7 @@ def deconvcells(mixsamples, sigprofile, lib_strategy=None, pvalue=False, method=
     :param outdir: [str/dir] output directory, default: ./
     :return: deconvoluted results file
     
-    '''
+    '''  
     mixsamples, sigprofile = intersect(mixsamples, sigprofile, lib_strategy)
     mixsamples, sigprofile = mixsamples[mixsamples.columns[3 : ]], sigprofile[sigprofile.columns[3 : ]]
     if norm: 
@@ -118,11 +118,12 @@ def deconvcells(mixsamples, sigprofile, lib_strategy=None, pvalue=False, method=
                 mixsamples.columns, 
                 log = False       , 
                 outfile = None
-            )
+            )       
     deconv_results = deconv(mixsamples, sigprofile, method=method, pvalue=pvalue)
     outfile = os.path.join(outdir, 'deconPeaker-Results.xls')
     deconv_results.to_csv(outfile, sep='\t', index=True, header=True)
     
     outfig = os.path.join(outdir, 'deconPeaker-Results')
+    import pdb; pdb.set_trace()
     stack_bars(deconv_results[sigprofile.columns], outfig)
     return deconv_results

@@ -4,7 +4,7 @@
 #author     : Huamei Li
 #date       : 11/06/2018
 #type       : module
-#version    : 2.7
+#version    : 3.8
 
 #-----------------------------------------------------
 # load python modules
@@ -14,7 +14,7 @@ import subprocess
 #-----------------------------------------------------
 # load own modules
 
-from utils import *
+from modules.utils import *
 
 #-----------------------------------------------------
 # global setting
@@ -42,7 +42,7 @@ def convert_saf(bedfil, fg=True, upstream=500000, downstream=500000):
     safile = create_tmp_files(os.path.basename(bedfil) + suffix, fixnames=True)[0]
     with open(bedfil, 'rb') as fp_r:
         for line in fp_r:
-            chrom, start, end = line.strip().split('\t')[0 : 3]
+            chrom, start, end = line.decode().strip().split('\t')[0 : 3]
             if chrom == 'chrom': continue
             start, end = map(int, [start, end])
             if not fg:
@@ -101,7 +101,7 @@ def readcounts_matrix(count_files, cells, outfile, bak_offset=500000):
     '''
     count_files = count_files if isinstance(count_files, list) else [ count_files ]
     fps = [ open(fil, 'rb') for fil in count_files ]
-    [ fp.readline() for fp in fps for idx in xrange(2) ]
+    [ fp.readline() for fp in fps for idx in range(2) ]
     with open(outfile, 'w') as fp_w:
         fp_w.write('chrom\tstart\tend\t{}\n'.format('\t'.join(cells)))
         if len(count_files) > 1:
@@ -116,7 +116,7 @@ def readcounts_matrix(count_files, cells, outfile, bak_offset=500000):
                 fp_w.write('\t'.join(tmp_infos) + '\n')
         else:
             for idx, line in enumerate(fps[0]):
-                line_infos = line.strip().split('\t')
+                line_infos = line.decode().strip().split('\t')
                 tmp_infos = line_infos[1 : 4] + line_infos[6 : ]
                 fp_w.write('\t'.join(tmp_infos) + '\n')
     return 0

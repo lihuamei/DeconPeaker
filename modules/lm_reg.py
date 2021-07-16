@@ -4,12 +4,12 @@
 #author      : Huamei Li
 #date        : 29/05/2018
 #type        : main script
-#version     : 2.7
+#version     : 3.8
 
 #-----------------------------------------------------
 # load own modules
 
-from utils import *
+from modules.utils import *
 
 #-----------------------------------------------------
 # global setting
@@ -38,8 +38,8 @@ def contranst_mat(ncells):
     nrows, ncols = (ncells - 1) * ncells, ncells
     X, flag, celltype = np.zeros((nrows, ncols)), 0, []
     
-    for i in xrange(nrows):
-        X[i, i / (ncols - 1)] = 1
+    for i in range(nrows):
+        X[i, int(i / (ncols - 1))] = 1
         if flag == i / (ncols - 1): flag += 1
         X[i, flag] = -1
         if (flag + 1) / ncells:
@@ -75,9 +75,8 @@ def multi_lmreg(datalst, X, XX_inv_X, XX_inv, contrasts_dict):
         beta_se_val = np.sqrt(np.diagonal(np.dot(np.dot(contrast, var_betahat), contrast.T)) / (contrasts_dict['cnts'] - 2))
     
         pvals = stats.t.sf(beta_differ / beta_se_val, np.dot(np.abs(contrast), obs_cnts) - 2)
-        pvals = [ np.max(pvals[cell_cluster == i]) for i in xrange(celltypecnt) ]
+        pvals = [ np.max(pvals[cell_cluster == i]) for i in range(celltypecnt) ]
         pvalst.append(pvals)
-
     return pvalst
 
 def get_cell_specific_pvals(profile, phenotypes, fields, threads=1):

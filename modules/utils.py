@@ -4,7 +4,7 @@
 #author      : Huamei Li
 #date        : 29/05/2018
 #type        : module
-#version     : 2.7
+#version     : 3.8
 
 #-----------------------------------------------------
 # load python modules
@@ -66,8 +66,8 @@ def create_tmp_files(fil_names=None, delete=False, fixnames=False, mode='w', tmp
     import tempfile
     fil_names = fil_names if fil_names else ''
     names  = fil_names if isinstance(fil_names, list) else [ fil_names ]
-    randon = [''.join(itemgetter(*np.random.choice(51, 25))(__import__('string').letters)) \
-            for idx in xrange(len(names)) ]
+    randon = [''.join(itemgetter(*np.random.choice(51, 25))(__import__('string').ascii_letters)) \
+            for idx in range(len(names)) ]
     names  = [rand + name for name, rand in zip(names, randon) ]
     tmpdir = os.path.join(tempfile.gettempdir(), tmpdir)
     try:
@@ -91,7 +91,7 @@ def split_bins(tasks, nth):
     length = len(tasks)
     bin_size, sub_tasks = int(length / nth), []
     if length % nth: bin_size += 1
-    for idx in xrange(nth):
+    for idx in range(nth):
         if idx != nth - 1:
             start, end = idx * bin_size, (idx + 1) * bin_size
         else:
@@ -445,7 +445,7 @@ def get_line_number(fil):
 		
     '''
     with open(fil, 'rb') as fp:
-	for count, line in enumerate(fp): pass
+        for count, line in enumerate(fp): pass
     return count
 
 def matlab_engine():

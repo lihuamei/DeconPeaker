@@ -9,8 +9,8 @@
 #--------------------------------------------------------
 # load own modules
 
-from utils    import *
-from opt_cmds import opts
+from modules.utils    import *
+from modules.opt_cmds import opts
 
 #--------------------------------------------------------
 # global setting
@@ -30,8 +30,8 @@ def read_snyaml(yaml_fil, ref=True):
     keys = ['bam', 'peak', 'cellname', 'batch'] if ref else ['bam', 'label']
     sn_dict, sn_infos = __import__('yaml').load(open(yaml_fil)), []
     
-    for sn, infos in sn_dict.iteritems():
-        infos = { key : value if isinstance(value, list) else [value] for key, value in infos.iteritems() }
+    for sn, infos in sn_dict.items():
+        infos = { key : value if isinstance(value, list) else [value] for key, value in infos.items() }
         if ref and 'batch' not in infos:
             tmp_name = itemgetter(*np.random.choice(51, 10))(__import__('string').letters)
             infos['batch'] = ['_XX_{}'.format(''.join(tmp_name))]
@@ -176,7 +176,7 @@ def check_platform():
 
     '''
     platname = __import__('platform').system()
-    if platname <> 'Linux':
+    if platname != 'Linux':
         sys.exit(LOGS.error('Does not support {}, only supports Linux series platform'.format(platname)))
     return 0
 

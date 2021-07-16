@@ -14,7 +14,7 @@ from scipy import linalg
 #--------------------------------------------------------
 # load own modules
 
-from utils import *
+from modules.utils import *
 
 #--------------------------------------------------------
 # global setting

@@ -4,12 +4,12 @@
 #author      : Huamei Li
 #date        : 29/05/2018
 #type        : module script
-#version     : 2.7
+#version     : 3.8
 
 #-----------------------------------------------------
 # load own python modules
 
-from utils  import *
+from modules.utils  import *
 
 #-----------------------------------------------------
 # global setting

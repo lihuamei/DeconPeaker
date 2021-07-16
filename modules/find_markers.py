@@ -4,14 +4,14 @@
 #author      : Huamei Li
 #date        : 27/06/2018
 #type        : module
-#version     : 2.7
+#version     : 3.8
 
 #--------------------------------------------------------
 # load own modules
 
-from normalize_methods       import *
-from optimize_specific_peaks import *
-from lm_reg import get_cell_specific_pvals
+from modules.normalize_methods       import *
+from modules.optimize_specific_peaks import *
+from modules.lm_reg import get_cell_specific_pvals
 
 #--------------------------------------------------------
 # global setting

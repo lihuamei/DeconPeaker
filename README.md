@@ -13,7 +13,7 @@ DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the followin
 	* Pandas
 	* bx
 	* Matplotlib
-	* rpy2 (older version)
+	* rpy2
 * R4.0:
 	* pls
 	* transport

@@ -29,10 +29,10 @@ import seaborn as sns; sns.set()
 
 #-----------------------------------------------------
 
-if len(sys.argv[1 : ]) <> 3:
+if len(sys.argv[1 : ]) != 3:
     sys.exit('[ERROR] USAGE: python true_VS_est_scatter_plot.py TRUE_proportion_file Estimate_proportion_file Algorithm_Name')
 else:
-    print >> sys.stderr, '[INFO] Plotting...'
+    print('[INFO] Plotting...')
 
 true_prop = pd.read_csv(sys.argv[1], sep='\t', header=0, index_col=0)
 esti_prop = pd.read_csv(sys.argv[2], sep='\t', header=0, index_col=0)

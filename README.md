@@ -6,7 +6,7 @@ DeconPeaker
 
 How to use `DeconPeaker`?
 ---------------------
-DeconPeaker's code is a mix of Python2.7 and R(3.5), which requires the following dependencies.
+DeconPeaker's code is a mix of Python3.8 and R(4.0), which requires the following dependencies.
 * Python3.8:
 	* Numpy
 	* Scipy

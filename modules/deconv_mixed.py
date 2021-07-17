@@ -124,6 +124,5 @@ def deconvcells(mixsamples, sigprofile, lib_strategy=None, pvalue=False, method=
     deconv_results.to_csv(outfile, sep='\t', index=True, header=True)
     
     outfig = os.path.join(outdir, 'deconPeaker-Results')
-    import pdb; pdb.set_trace()
     stack_bars(deconv_results[sigprofile.columns], outfig)
     return deconv_results

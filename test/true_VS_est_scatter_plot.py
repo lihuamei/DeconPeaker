@@ -20,7 +20,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from itertools import cycle
 import seaborn as sns; sns.set()
-
+from matplotlib.axes._axes import _log as matplotlib_axes_logger
+matplotlib_axes_logger.setLevel('ERROR')
 #-----------------------------------------------------
 # global setting
 
@@ -63,5 +64,4 @@ plt.text(.015, 0.90, r'p.value={}'.format(pvalue), fontsize=8, color='b', fontwe
 plt.text(.015, 0.95, r'correration={}'.format(corr), fontsize=8, color='b', fontweight='bold')
 plt.text(.015, 0.85, r'n={}'.format(esti_prop.shape[0]), fontsize=8, color='b', fontweight='bold')
 plt.tight_layout()
-plt.show()
 plt.savefig(prefix_na + '_true_estimate_scatter.png', dpi=300, format='png')

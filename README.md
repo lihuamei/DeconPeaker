@@ -34,3 +34,7 @@ It is necessary to mention that there are four parts in DeconPeaker, and details
 More Information
 --------------------
 Please see [Tutorial](https://lihuamei.github.io//DeconPeaker/test/DeconPeak_demo.html).
+
+Citation
+---------------------
+Please cite the publication: Li H, Sharma A, Luo K, et al. DeconPeaker, a deconvolution model to identify cell types based on chromatin accessibility in ATAC-Seq data of mixture samples[J]. Frontiers in genetics, 2020, 11: 392.

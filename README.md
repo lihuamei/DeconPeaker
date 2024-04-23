@@ -4,8 +4,10 @@ DeconPeaker
 `DeconPeaker`: a deconvolution method to estimate cell type proportions in chromatin accessibility data (ATAC-Seq), as well as gene expression data (RNA-Seq & Microarray).
 ![DeconPeaker\_pipeline](pipeline.png)
 
-Dependance of `DeconPeaker`
+Dependance and installation of `DeconPeaker`
 ---------------------
+#### Dependance
+
 DeconPeaker's code is a mix of Python3.8 and R(4.0), which requires the following dependencies.
 * Python3.8:
 	* Numpy
@@ -24,8 +26,8 @@ DeconPeaker's code is a mix of Python3.8 and R(4.0), which requires the followin
 	* samtools
 	* featureCounts
 
-Installation of DeconPeaker
---------------------------
+#### Installation
+
 ```bash
 git clone git@github.com:lihuamei/DeconPeaker.git
 cd DeconPeaker && pip install . && cd ..

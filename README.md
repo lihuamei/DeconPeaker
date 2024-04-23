@@ -55,7 +55,7 @@ optional arguments:
 
 ```
 
-Show an exmaple
+Show an exmaple for deconvolution
 ------------------------------------------
 
 ```bash
@@ -81,8 +81,6 @@ Sample_29   0.000000  0.044709  0.002532  0.141323  0.000000  0.028472  0.000000
 
 [195 rows x 16 columns]
 INFO  @ Tue, 23 Apr 2024 14:50:17: Elapsed time is 29.629956245422363 seconds
-INFO  @ Tue, 23 Apr 2024 14:50:17: Embedded R ended.
-INFO  @ Tue, 23 Apr 2024 14:50:17: Embedded R already ended.
 ```
 More Information
 --------------------

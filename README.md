@@ -34,6 +34,8 @@ pip install .
 cd ..
 ```
 
+## Running DeconPeaker from the command line interface for analysis.
+
 ```python
 deconPeaker --help
 usage: deconPeaker [-h] {preprocess,findctsps,deconvolution,simulation} ...

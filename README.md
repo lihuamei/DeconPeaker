@@ -6,7 +6,7 @@ DeconPeaker
 
 Dependance and installation of `DeconPeaker`
 ---------------------
-#### Dependance
+### Dependance
 
 DeconPeaker's code is a mix of Python3.8 and R(4.0), which requires the following dependencies.
 * Python3.8:
@@ -26,7 +26,7 @@ DeconPeaker's code is a mix of Python3.8 and R(4.0), which requires the followin
 	* samtools
 	* featureCounts
 
-#### Installation
+### Installation
 
 ```bash
 git clone git@github.com:lihuamei/DeconPeaker.git

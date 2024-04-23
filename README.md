@@ -84,13 +84,6 @@ INFO  @ Tue, 23 Apr 2024 14:50:17: Elapsed time is 29.629956245422363 seconds
 INFO  @ Tue, 23 Apr 2024 14:50:17: Embedded R ended.
 INFO  @ Tue, 23 Apr 2024 14:50:17: Embedded R already ended.
 ```
--------------------
-It is necessary to mention that there are four parts in DeconPeaker, and details as follows:
-* preprocess: only supports on Linux system
-* findctsps: supports on Windows and Linux systems
-* deconvolution: supports on Windows and Linux systems
-* simulation: only supports on Linux system
-
 More Information
 --------------------
 Please see [Tutorial](https://lihuamei.github.io//DeconPeaker/test/DeconPeak_demo.html).

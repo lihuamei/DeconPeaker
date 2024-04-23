@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: DeconPeaker
+Version: 1.1.1
+Summary: A deconvolution method to estimate cell type proportions in chromatin accessibility data
+Home-page: https://github.com/lihuamei/DeconPeaker.git
+Author: Huamei Li
+Author-email: li_hua_mei@163.com

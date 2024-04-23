@@ -25,7 +25,7 @@ from modules.parse_opts   import parse_opts
 
 LOGS = log_infos() # logging informative
 
-numexpr.set_num_threads(numexpr.detect_number_of_cores())
+numexpr.set_num_threads(int(numexpr.detect_number_of_cores() * 0.5))
 
 #-----------------------------------------------------
 

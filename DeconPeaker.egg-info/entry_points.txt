@@ -1,0 +1,2 @@
+[console_scripts]
+deconPeaker = DeconPeaker.deconPeaker:run

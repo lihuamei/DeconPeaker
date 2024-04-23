@@ -28,10 +28,8 @@ Installation of DeconPeaker
 --------------------------
 ```bash
 git clone git@github.com:lihuamei/DeconPeaker.git
-cd DeconPeaker
-pip install .
+cd DeconPeaker && pip install . && cd ..
 
-cd ..
 ```
 
 ## Running DeconPeaker from the command line interface for analysis.

@@ -35,7 +35,7 @@ cd DeconPeaker && pip install . && cd ..
 How to use `DeconPeaker`?
 --------------------------
 
-### Running DeconPeaker from the command line interface for analysis.
+#### Running DeconPeaker from the command line interface for analysis.
 
 ```python
 deconPeaker --help
@@ -64,6 +64,11 @@ Show an exmaple on gene expression profile
 ```bash
 deconPeaker deconvolution --lib-strategy=ATAC-Seq --mixture=DeconPeaker/test/examples/ATAC-Seq/GSE74912_Corces_MR_synthetic_mixture_counts_data.xls --pure=DeconPeaker/test/examples/ATAC-Seq/GSE74912_Corces_MR_pure_readcounts_signature_matrix.xls --format=TABLE --pvalue=FALSE --outdir=DeconPeaker/results/GSE74912_Corces_MR
 
+```
+
+#### Running message
+
+```
 INFO  @ Tue, 23 Apr 2024 14:49:47: Deconvolving......
 [1] "[WARN] Lambda = 0, Log transfer for SIMPLS"
 [1] "[WARN] Lambda = 0, Log transfer for SIMPLS"

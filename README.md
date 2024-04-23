@@ -38,7 +38,6 @@ How to use `DeconPeaker`?
 #### Running DeconPeaker from the command line interface for analysis.
 
 ```python
-deconPeaker --help
 usage: deconPeaker [-h] {preprocess,findctsps,deconvolution,simulation} ...
 
 deconPeaker - a deconvolution model to identify cell types based on chromatin accessibility in ATAC-Seq data of mixture samples.

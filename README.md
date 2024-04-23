@@ -37,8 +37,6 @@ cd DeconPeaker && pip install . && cd ..
 How to use `DeconPeaker`?
 --------------------------
 
-#### Running DeconPeaker from the command line interface for analysis.
-
 ```python
 usage: deconPeaker [-h] {preprocess,findctsps,deconvolution,simulation} ...
 

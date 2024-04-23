@@ -53,8 +53,6 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-INFO  @ Tue, 23 Apr 2024 15:09:32: Embedded R ended.
-INFO  @ Tue, 23 Apr 2024 15:09:32: Embedded R already ended.
 
 ```
 

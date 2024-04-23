@@ -55,7 +55,7 @@ optional arguments:
 
 ```
 
-Show an exmaple on gene expression profile
+Show an exmaple
 ------------------------------------------
 
 ```bash

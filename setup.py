@@ -24,7 +24,10 @@ setup(
         'rpy2',
         'scipy',
         'seaborn',
-        'setuptools'
+        'setuptools',
+        'yaml', 
+        'pkg_resources',  
+        'warnings'
     ],
     entry_points = {
         'console_scripts': [
